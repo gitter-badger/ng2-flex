@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": true,
-    "outDir": "../../dist/@angular/material",
+    "outDir": "../../dist/ng2-flex",
     "rootDir": ".",
     "sourceMap": true,
     "target": "es5",

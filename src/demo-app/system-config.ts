@@ -21,9 +21,9 @@ System.config({
   packages: {
     // Thirdparty barrels.
     'rxjs': { main: 'index' },
-    '@angular/material': {
+    'ng2-flex': {
       format: 'cjs',
-      main: 'material.umd.js'
+      main: 'ng2-flex.umd.js'
     },
     // Set the default extension for the root package, because otherwise the demo-app can't
     // be built within the production mode. Due to missing file extensions.

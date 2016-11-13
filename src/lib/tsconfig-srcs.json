@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": true,
-    "outDir": "../../dist/@angular/material",
+    "outDir": "../../dist/ng2-flex",
     "rootDir": ".",
     "sourceMap": true,
     "target": "es5",
@@ -26,7 +26,7 @@
     "system-config-spec.ts"
   ],
   "angularCompilerOptions": {
-    "genDir": "../../dist/@angular/material",
+    "genDir": "../../dist/ng2-flex",
     "skipTemplateCodegen": true,
     "debug": true
   }

@@ -17,7 +17,7 @@ const rollup = require('rollup').rollup;
 // When `tsconfig-spec.json` is used, we are outputting CommonJS modules. This is used
 // for unit tests (karma).
 
-/** Path to the root of the Angular Material component library. */
+/** Path to the root of the ng2-flex component library. */
 const componentsDir = path.join(SOURCE_ROOT, 'lib');
 
 /** Path to the tsconfig used for ESM output. */
@@ -56,7 +56,7 @@ task(':build:components:scss', sassBuildTask(
   DIST_COMPONENTS_ROOT, componentsDir, [path.join(componentsDir, 'core/style')]
 ));
 
-/** Builds the UMD bundle for all of Angular Material. */
+/** Builds the UMD bundle for all of ng2-flex. */
 task(':build:components:rollup', [':build:components:inline'], () => {
   const globals: {[name: string]: string} = {
     // Angular dependencies
@@ -82,29 +82,29 @@ task(':build:components:rollup', [':build:components:inline'], () => {
     'rxjs/Observable': 'Rx'
   };
 
-  // Rollup the @angular/material UMD bundle from all ES5 + imports JavaScript files built.
+  // Rollup the ng2-flex UMD bundle from all ES5 + imports JavaScript files built.
   return rollup({
     entry: path.join(DIST_COMPONENTS_ROOT, 'index.js'),
     context: 'this',
     external: Object.keys(globals)
   }).then((bundle: { generate: any }) => {
     const result = bundle.generate({
-      moduleName: 'ng.material',
+      moduleName: 'ng.flex',
       format: 'umd',
       globals,
       sourceMap: true,
-      dest: path.join(DIST_COMPONENTS_ROOT, 'material.umd.js')
+      dest: path.join(DIST_COMPONENTS_ROOT, 'ng2-flex.umd.js')
     });
 
     // Add source map URL to the code.
-    result.code += '\n\n//# sourceMappingURL=./material.umd.js.map\n';
+    result.code += '\n\n//# sourceMappingURL=./ng2-flex.umd.js.map\n';
     // Format mapping to show properly in the browser. Rollup by default will put the path
     // as relative to the file, and since that path is in src/lib and the file is in
-    // dist/@angular/material, we need to kill a few `../`.
+    // dist/@angular/ng2-flex, we need to kill a few `../`.
     result.map.sources = result.map.sources.map((s: string) => s.replace(/^(\.\.\/)+/, ''));
 
-    writeFileSync(path.join(DIST_COMPONENTS_ROOT, 'material.umd.js'), result.code, 'utf8');
-    writeFileSync(path.join(DIST_COMPONENTS_ROOT, 'material.umd.js.map'), result.map, 'utf8');
+    writeFileSync(path.join(DIST_COMPONENTS_ROOT, 'ng2-flex.umd.js'), result.code, 'utf8');
+    writeFileSync(path.join(DIST_COMPONENTS_ROOT, 'ng2-flex.umd.js.map'), result.map, 'utf8');
   });
 });
 
