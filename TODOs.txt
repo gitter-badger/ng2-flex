@@ -1,0 +1,6 @@
+Cosas que faltan para la versión final
+----------------------------------------
+
+* Ver si puedo tener elementos que se vayan acomodando solos como tiles
+* Agregar propiedad que me permita especificar el comportamiento del size, heredo o corto
+* Permitir especificar la separación dependiendo del size

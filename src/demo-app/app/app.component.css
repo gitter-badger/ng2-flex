@@ -1,0 +1,10 @@
+.testBox {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+.middle-align{
+    justify-content: center;
+    align-items: center;
+}
