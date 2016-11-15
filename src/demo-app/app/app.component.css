@@ -1,9 +1,44 @@
 header{
     color: #7FBFFF;
     background-color: #001f3f;
+    min-height: 50px;
+    padding: 20px;
 }
 
-.middle-align{
-    justify-content: center;
-    align-items: center;
+.menu-item {
+    padding: 5px 20px;
+}
+
+.menu-item:hover {
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.main-panel {
+    height: 100%;
+}
+
+aside {
+    background-color: #777;
+    max-width: 200px;
+}
+
+.banner {
+    width: calc(100% - 20px);
+    height: 100px;
+    background-color: #555;
+    margin: 10px;
+}
+
+.social-icon {
+    color: #eee;
+    margin: 10px;
+}
+
+.copyright-text {
+    color: #aaa;
+    font-size: smaller;
 }
