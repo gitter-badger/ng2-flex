@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+    moduleId: module.id,
     selector: 'test',
     templateUrl: './test.component.html',
     host: {

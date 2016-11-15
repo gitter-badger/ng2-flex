@@ -4,20 +4,23 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": ["es6", "es2015", "dom"],
-    "mapRoot": "/",
+    "mapRoot": "./",
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "../../dist",
     "sourceMap": true,
     "target": "es5",
     "typeRoots": [
-      "../node_modules/@types"
+      "../../node_modules/@types"
     ],
     "paths": {
       "ng2-flex": [
         "../../dist/ng2-flex"
       ]
-    }
+    },
+    "types": [
+      "node"
+    ]
   },
   "angularCompilerOptions": {
     "genDir": "../../dist",

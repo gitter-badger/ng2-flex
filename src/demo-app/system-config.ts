@@ -17,14 +17,12 @@ System.config({
     '@angular/platform-browser': 'vendor/@angular/platform-browser/bundles/platform-browser.umd.js',
     '@angular/platform-browser-dynamic':
       'vendor/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+
+    'ng2-flex': 'ng2-flex/ng2-flex.umd.js'
   },
   packages: {
     // Thirdparty barrels.
     'rxjs': { main: 'index' },
-    'ng2-flex': {
-      format: 'cjs',
-      main: 'ng2-flex.umd.js'
-    },
     // Set the default extension for the root package, because otherwise the demo-app can't
     // be built within the production mode. Due to missing file extensions.
     '.': {

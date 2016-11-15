@@ -1,15 +1,15 @@
 <layout>
-  <grid-layout>
-    <row-layout style="background-color: green" [height]="'auto'">
+  <gridLayout>
+    <rowLayout style="background-color: green" [height]="'auto'">
       <test></test>
-    </row-layout>
-    <row-layout [switchSize]="'small'" style="background-color: yellow; height: 100%">
-      <div column-layout class="middle-align" [separation]="'all'" [width]="{extraSmall: 'none', small: '50%', medium: '30%'}">
+    </rowLayout>
+    <rowLayout [switchSize]="'small'" style="background-color: yellow; height: 100%">
+      <div columnLayout class="middle-align" [separation]="'all'" [width]="{extraSmall: 'none', small: '50%', medium: '30%'}">
         <input type="text"/>
         <div class="testBox"></div>
         <div class="testBox"></div>
       </div>
-      <column-layout>
+      <columnLayout>
         <!--<div class="testBox"></div>-->
         <section style="overflow-y: auto; width: 100%; height: 100%;">
           <p>
@@ -19,15 +19,15 @@ El nombre C Sharp fue inspirado por la notación musical, donde '#' (sostenido, 
 Aunque C# forma parte de la plataforma .NET, ésta es una API, mientras que C# es un lenguaje de programación independiente diseñado para generar programas sobre dicha plataforma. Ya existe un compilador implementado que provee el marco Mono - DotGNU, el cual genera programas para distintas plataformas como Windows, Unix, Android, iOS, Windows Phone, Mac OS y GNU/Linux.
         </p>
         </section>
-      </column-layout>
+      </columnLayout>
       <!--<column-layout><div class="testBox"></div></column-layout>-->
-      <column-layout *minSize="'small'" [verticalAlignment]="'center'" [width]="{small: 'auto', medium: '30%'}">
+      <columnLayout *minSize="'small'" [verticalAlignment]="'center'" [width]="{small: 'auto', medium: '30%'}">
         <input type="text"/>
         <div class="testBox"></div>
-      </column-layout>
-    </row-layout>
-    <row-layout style="background-color: black" [height]="'15%'">
+      </columnLayout>
+    </rowLayout>
+    <rowLayout style="background-color: black" [height]="'15%'">
       <div class="testBox"></div>
-    </row-layout>
-  </grid-layout>
+    </rowLayout>
+  </gridLayout>
 </layout>

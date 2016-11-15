@@ -11,7 +11,7 @@ import {
 const appDir = path.join(SOURCE_ROOT, 'demo-app');
 const outDir = DIST_ROOT;
 const LIVERELOAD_PATTERNS = [
-  /material\.umd\.js$/,
+  /ng2-flex\.umd\.js$/,
   /-demo\.[a-z]+$/,
   /\/theming\/prebuilt/
 ];

@@ -198,6 +198,7 @@ export function serverTask(liveReload: livereloadOptions = true,
     const stream = gulp.src('dist').pipe(gulpServer({
       livereload: liveReload,
       fallback: 'index.html',
+      log: "debug",
       port: 4200
     }));
 
