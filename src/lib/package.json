@@ -1,6 +1,6 @@
 {
   "name": "ng2-flex",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~2.1.0",
