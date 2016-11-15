@@ -1,8 +1,8 @@
 {
   "name": "ng2-flex",
   "description": "Flexbox Layout System for Angular 2",
-  "homepage": "",
-  "bugs": "",
+  "homepage": "https://github.com/santoro-mariano/ng2-flex",
+  "bugs": "https://github.com/santoro-mariano/ng2-flex/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/santoro-mariano/ng2-flex"
@@ -15,7 +15,7 @@
     "deploy": "firebase deploy",
     "webdriver-manager": "webdriver-manager"
   },
-  "version": "0.5.3",
+  "version": "0.5.4",
   "license": "MIT",
   "engines": {
     "node": ">= 5.4.1 < 7"
