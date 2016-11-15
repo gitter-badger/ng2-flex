@@ -7,7 +7,7 @@ import { GridElementClasses } from "./gridElementClasses";
 import { rowClasses, columnClasses } from "./constants";
 
 @Component({
-    selector: "row-layout, [row-layout]",
+    selector: "rowLayout, [rowLayout]",
     template: "<ng-content></ng-content>"
 })
 export class RowLayoutComponent extends GridLayoutElement {

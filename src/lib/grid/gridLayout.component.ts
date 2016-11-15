@@ -1,7 +1,7 @@
 import { Component, HostBinding, ElementRef, Renderer  } from "@angular/core";
 
 @Component({
-    selector: "grid-layout, [grid-layout]",
+    selector: "gridLayout, [gridLayout]",
     template: "<ng-content></ng-content>"
 })
 export class GridLayoutComponent {
