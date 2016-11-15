@@ -1,7 +1,6 @@
-.testBox {
-    height: 50px;
-    width: 50px;
-    background-color: red;
+header{
+    color: #7FBFFF;
+    background-color: #001f3f;
 }
 
 .middle-align{

@@ -1,23 +1,14 @@
 <layout>
   <gridLayout>
-    <rowLayout style="background-color: green" [height]="'auto'">
-      <test></test>
-    </rowLayout>
+    <header rowLayout [height]="'auto'">
+      Demo App
+    </header>
     <rowLayout [switchSize]="'small'" style="background-color: yellow; height: 100%">
       <div columnLayout class="middle-align" [separation]="'all'" [width]="{extraSmall: 'none', small: '50%', medium: '30%'}">
-        <input type="text"/>
-        <div class="testBox"></div>
-        <div class="testBox"></div>
       </div>
       <columnLayout>
         <!--<div class="testBox"></div>-->
         <section style="overflow-y: auto; width: 100%; height: 100%;">
-          <p>
-          C#1 (pronunciado si sharp en inglés) es un lenguaje de programación orientado a objetos desarrollado y estandarizado por Microsoft como parte de su plataforma .NET, que después fue aprobado como un estándar por la ECMA (ECMA-334) e ISO (ISO/IEC 23270). C# es uno de los lenguajes de programación diseñados para la infraestructura de lenguaje común.
-Su sintaxis básica deriva de C/C++ y utiliza el modelo de objetos de la plataforma .NET, similar al de Java, aunque incluye mejoras derivadas de otros lenguajes.
-El nombre C Sharp fue inspirado por la notación musical, donde '#' (sostenido, en inglés sharp) indica que la nota (C es la nota do en inglés) es un semitono más alta, sugiriendo que C# es superior a C/C--. Además, el signo '#' se compone de cuatro signos '+' pegados.2
-Aunque C# forma parte de la plataforma .NET, ésta es una API, mientras que C# es un lenguaje de programación independiente diseñado para generar programas sobre dicha plataforma. Ya existe un compilador implementado que provee el marco Mono - DotGNU, el cual genera programas para distintas plataformas como Windows, Unix, Android, iOS, Windows Phone, Mac OS y GNU/Linux.
-        </p>
         </section>
       </columnLayout>
       <!--<column-layout><div class="testBox"></div></column-layout>-->
@@ -27,7 +18,11 @@ Aunque C# forma parte de la plataforma .NET, ésta es una API, mientras que C# e
       </columnLayout>
     </rowLayout>
     <rowLayout style="background-color: black" [height]="'15%'">
-      <div class="testBox"></div>
+      <rowLayout>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </rowLayout>
     </rowLayout>
   </gridLayout>
 </layout>

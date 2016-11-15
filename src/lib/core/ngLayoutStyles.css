@@ -7,7 +7,7 @@
     height: 100vh;
 }
 
-.container {
+.flex-container {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -15,7 +15,7 @@
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
-.container-child {
+.flex-container-child {
     -webkit-box-flex: 1 1 auto;      /* OLD - iOS 6-, Safari 3.1-6 */
     -moz-box-flex: 1 1 auto;         /* OLD - Firefox 19- */
     /*width: 20%;*/                     /* For old syntax, otherwise collapses. */
@@ -24,7 +24,7 @@
     flex: 1 1 auto;
 }
 
-.vertical-container {
+.flex-vertical-container {
     -webkit-box-flex-direction: column;
     -moz-box-flex-direction: column;
     -webkit-flex-direction: column;
@@ -32,7 +32,7 @@
     flex-direction: column;
 }
 
-.horizontal-container {
+.flex-horizontal-container {
     -webkit-box-flex-direction: row;
     -moz-box-flex-direction: row;
     -webkit-flex-direction: row;

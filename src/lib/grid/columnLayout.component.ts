@@ -16,14 +16,14 @@ export class ColumnLayoutComponent extends GridLayoutElement {
 
     constructor(readonly elementRef: ElementRef, readonly renderer: Renderer, readonly layoutService: LayoutService){
         super(elementRef, renderer, layoutService);
-        this.renderer.setElementClass(this.elementRef.nativeElement, "container-child", true);
-        this.renderer.setElementClass(this.elementRef.nativeElement, "container", true);
+        this.renderer.setElementClass(this.elementRef.nativeElement, "flex-container-child", true);
+        this.renderer.setElementClass(this.elementRef.nativeElement, "flex-container", true);
     }
 
-    @HostBinding("class.vertical-container")
+    @HostBinding("class.flex-vertical-container")
     private verticalContainer = true;
 
-    @HostBinding("class.horizontal-container")
+    @HostBinding("class.flex-horizontal-container")
     private horizontalContainer = false;
 
     @HostBinding("class.hidden")
