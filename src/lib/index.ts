@@ -4,4 +4,4 @@ export {
     LayoutModule
 }
 
-export * from "./conditionalSizeDirective/index";
+export * from "./directives/index";

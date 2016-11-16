@@ -1,7 +1,5 @@
 import { ElementRef, Renderer } from "@angular/core";
-import { LayoutService, DeviceSize } from "./../core/index";
-import { SizeMapping } from "./sizeMapping";
-import { OrderMapping } from "./orderMapping";
+import { LayoutService, DeviceSize, SizeMapping } from "./../core/index";
 import { GridElementClasses } from "./gridElementClasses";
 import { ItemsSeparationClasses } from "./constants"
 
@@ -34,7 +32,7 @@ export abstract class GridLayoutElement {
 
     verticalAlignment: string;
 
-    order: number | OrderMapping = 0;
+    order: number | SizeMapping = 0;
 
     protected get size(): string | SizeMapping {
         return this._size;
@@ -174,16 +172,16 @@ export abstract class GridLayoutElement {
         let size: string;
         switch (currentSize) {
             case DeviceSize.extraSmall:
-                size = sizeMapping.extraSmall;
+                size = sizeMapping.extraSmall as string;
                 break;
             case DeviceSize.small:
-                size = sizeMapping.small || sizeMapping.extraSmall;
+                size = (sizeMapping.small || sizeMapping.extraSmall) as string;
                 break;
             case DeviceSize.medium:
-                size = sizeMapping.medium || sizeMapping.small || sizeMapping.extraSmall;
+                size = (sizeMapping.medium || sizeMapping.small || sizeMapping.extraSmall) as string;
                 break;
             case DeviceSize.large:
-                size = sizeMapping.large || sizeMapping.medium || sizeMapping.small || sizeMapping.extraSmall;
+                size = (sizeMapping.large || sizeMapping.medium || sizeMapping.small || sizeMapping.extraSmall) as string;
                 break;
         }
 
@@ -194,20 +192,20 @@ export abstract class GridLayoutElement {
         return size ? `0 0 ${size}` : '1 1 auto';
     }
 
-    private getOrderOfSize(orderMapping: OrderMapping, currentSize: DeviceSize): number{
+    private getOrderOfSize(orderMapping: SizeMapping, currentSize: DeviceSize): number{
         let order: number;
         switch (currentSize) {
             case DeviceSize.extraSmall:
-                order = orderMapping.extraSmall;
+                order = orderMapping.extraSmall as number;
                 break;
             case DeviceSize.small:
-                order = orderMapping.small || orderMapping.extraSmall;
+                order = (orderMapping.small || orderMapping.extraSmall) as number;
                 break;
             case DeviceSize.medium:
-                order = orderMapping.medium || orderMapping.small || orderMapping.extraSmall;
+                order = (orderMapping.medium || orderMapping.small || orderMapping.extraSmall) as number;
                 break;
             case DeviceSize.large:
-                order = orderMapping.large || orderMapping.medium || orderMapping.small || orderMapping.extraSmall;
+                order = (orderMapping.large || orderMapping.medium || orderMapping.small || orderMapping.extraSmall) as number;
                 break;
         }
 

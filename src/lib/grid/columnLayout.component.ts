@@ -1,7 +1,5 @@
 import { Component, Input, HostBinding, SimpleChange, ElementRef, Renderer } from "@angular/core";
-import { LayoutService, DeviceSize } from "./../core/index";
-import { SizeMapping } from "./sizeMapping";
-import { OrderMapping } from "./orderMapping";
+import { LayoutService, DeviceSize, SizeMapping } from "./../core/index";
 import { GridLayoutElement } from "./gridLayoutElement";
 import { GridElementClasses } from "./gridElementClasses";
 import { rowClasses, columnClasses } from "./constants";
@@ -57,7 +55,7 @@ export class ColumnLayoutComponent extends GridLayoutElement {
     verticalAlignment: string;
 
     @Input()
-    order: number | OrderMapping = 0;
+    order: number | SizeMapping = 0;
 
     ngOnInit() {
         this.init();

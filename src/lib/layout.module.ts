@@ -5,12 +5,12 @@ import { LayoutService, LayoutContainerComponent } from "./core/index";
 
 import { GridLayoutComponent, ColumnLayoutComponent, RowLayoutComponent } from "./grid/index";
 
-import { MaxSizeDirective, MinSizeDirective, SizeDirective } from "./conditionalSizeDirective/index";
+import { MaxSizeDirective, MinSizeDirective, SizeDirective, FlexClassDirective  } from "./directives/index";
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [LayoutContainerComponent, GridLayoutComponent, ColumnLayoutComponent, RowLayoutComponent, MaxSizeDirective, MinSizeDirective, SizeDirective],
-    exports: [LayoutContainerComponent, GridLayoutComponent, ColumnLayoutComponent, RowLayoutComponent, MaxSizeDirective, MinSizeDirective, SizeDirective],
+    declarations: [LayoutContainerComponent, GridLayoutComponent, ColumnLayoutComponent, RowLayoutComponent, MaxSizeDirective, MinSizeDirective, SizeDirective, FlexClassDirective],
+    exports: [LayoutContainerComponent, GridLayoutComponent, ColumnLayoutComponent, RowLayoutComponent, MaxSizeDirective, MinSizeDirective, SizeDirective, FlexClassDirective],
     providers: [LayoutService]
 })
 export class LayoutModule { }
