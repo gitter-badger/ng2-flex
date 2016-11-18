@@ -23,6 +23,9 @@ main {
 
 aside {
     background-color: #777;
+}
+
+.aside-max-size {
     max-width: 200px;
 }
 
