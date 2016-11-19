@@ -1,9 +1,9 @@
-import { GridLayoutComponent } from "./gridLayout.component";
-import { RowLayoutComponent } from "./rowLayout.component";
-import { ColumnLayoutComponent } from "./columnLayout.component";
+import { FlxGridComponent } from "./flxGrid.component";
+import { FlxRowComponent } from "./flxRow.component";
+import { FlxColumnComponent } from "./flxColumn.component";
 
 export {
-    GridLayoutComponent,
-    RowLayoutComponent,
-    ColumnLayoutComponent
+    FlxGridComponent,
+    FlxRowComponent,
+    FlxColumnComponent
 }

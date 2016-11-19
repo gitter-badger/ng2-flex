@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { LayoutModule } from 'ng2-flex';
+import { FlexModule } from 'ng2-flex';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test.component';
@@ -16,7 +16,7 @@ import { TestComponent } from './test.component';
   imports: [
     BrowserModule,
     FormsModule,
-    LayoutModule,
+    FlexModule,
     HttpModule
   ],
   providers: [],

@@ -1,21 +1,19 @@
 import { Directive, Input, ViewContainerRef, TemplateRef } from "@angular/core";
 import { ConditionalSizeDirective } from "./conditionalSize.directive";
-import { LayoutService, DeviceSize } from "./../core/index";
-
-
+import { FlexService, DeviceSize } from "./../core/index";
 
 @Directive({
-    selector: "[size]"
+    selector: "[flxSize]"
 })
-export class SizeDirective extends ConditionalSizeDirective {
+export class FlxSizeDirective extends ConditionalSizeDirective {
 
     private _size: string;
 
-    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, layoutService: LayoutService){
-        super(viewContainerRef, templateRef, layoutService);
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, flexService: FlexService){
+        super(viewContainerRef, templateRef, flexService);
     }
 
-    @Input("size")
+    @Input("flxSize")
     set size(value: string){
         this._size = value;
         this.updateVisibility();

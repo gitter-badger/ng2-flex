@@ -1,18 +1,18 @@
 import { ViewContainerRef, TemplateRef } from "@angular/core";
-import { LayoutService, DeviceSize } from "./../core/index";
+import { FlexService, DeviceSize } from "./../core/index";
 
 export abstract class ConditionalSizeDirective {
 
     private visibility = false;
 
-    constructor(private readonly viewContainerRef: ViewContainerRef, private readonly templateRef: TemplateRef<any>, private readonly layoutService: LayoutService) {
-        this.layoutService.onDeviceSizeChanged.subscribe(() => this.updateVisibility());
+    constructor(private readonly viewContainerRef: ViewContainerRef, private readonly templateRef: TemplateRef<any>, private readonly flexService: FlexService) {
+        this.flexService.onDeviceSizeChanged.subscribe(() => this.updateVisibility());
     }
 
     protected abstract isSizeValid(size: DeviceSize): boolean;
 
     protected updateVisibility(): void{
-        const showTemplate = this.isSizeValid(this.layoutService.currentDeviceSize);
+        const showTemplate = this.isSizeValid(this.flexService.currentDeviceSize);
         if(this.visibility === showTemplate){
             return;
         }

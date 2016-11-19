@@ -1,19 +1,19 @@
 import { Directive, Input, ViewContainerRef, TemplateRef } from "@angular/core";
 import { ConditionalSizeDirective } from "./conditionalSize.directive";
-import { LayoutService, DeviceSize } from "./../core/index";
+import { FlexService, DeviceSize } from "./../core/index";
 
 @Directive({
-    selector: "[maxSize]"
+    selector: "[flxMaxSize]"
 })
-export class MaxSizeDirective extends ConditionalSizeDirective {
+export class FlxMaxSizeDirective extends ConditionalSizeDirective {
 
     private _maxSize: string;
 
-    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, layoutService: LayoutService){
-        super(viewContainerRef, templateRef, layoutService);
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, flexService: FlexService){
+        super(viewContainerRef, templateRef, flexService);
     }
 
-    @Input("maxSize")
+    @Input("flxMaxSize")
     set maxSize(value: string){
         this._maxSize = value;
         this.updateVisibility();

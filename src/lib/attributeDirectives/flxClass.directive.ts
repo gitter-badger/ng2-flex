@@ -1,21 +1,21 @@
 import { Directive, Input, Renderer, ElementRef } from "@angular/core";
-import { SizeMapping, LayoutService, DeviceSize } from "./../core/index";
+import { SizeMapping, FlexService, DeviceSize } from "./../core/index";
 
 @Directive({
-    selector: "[sizeClass]"
+    selector: "[flxClass]"
 })
-export class SizeClassDirective {
+export class FlxClassDirective {
 
     private oldDeviceSize: DeviceSize;
 
-    constructor(private layoutService: LayoutService, private renderer: Renderer, private elementRef: ElementRef) {
-        this.updateClass(layoutService.currentDeviceSize);
-        layoutService.onDeviceSizeChanged.subscribe((deviceSize: DeviceSize) => {
+    constructor(private flexService: FlexService, private renderer: Renderer, private elementRef: ElementRef) {
+        this.updateClass(flexService.currentDeviceSize);
+        flexService.onDeviceSizeChanged.subscribe((deviceSize: DeviceSize) => {
             this.updateClass(deviceSize);
         });
     }
 
-    @Input("sizeClass")
+    @Input("flxClass")
     mapping: SizeMapping;
 
     private updateClass(deviceSize: DeviceSize): void {

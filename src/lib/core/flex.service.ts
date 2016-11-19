@@ -3,7 +3,7 @@ import { Injectable, EventEmitter } from "@angular/core";
 import { DeviceSize } from "./deviceSize";
 
 @Injectable()
-export class LayoutService{
+export class FlexService{
 
     private _currentDeviceSize: DeviceSize;
     private currentMin = 0;

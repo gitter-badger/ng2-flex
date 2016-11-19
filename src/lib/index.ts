@@ -1,7 +1,8 @@
-import { LayoutModule } from "./layout.module";
+import { FlexModule } from "./flex.module";
 
 export {
-    LayoutModule
+    FlexModule
 }
 
-export * from "./directives/index";
+export * from "./structuralDirectives/index";
+export * from "./attributeDirectives/index";

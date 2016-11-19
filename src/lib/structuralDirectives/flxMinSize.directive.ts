@@ -1,19 +1,19 @@
 import { Directive, Input, ViewContainerRef, TemplateRef } from "@angular/core";
 import { ConditionalSizeDirective } from "./conditionalSize.directive";
-import { LayoutService, DeviceSize } from "./../core/index";
+import { FlexService, DeviceSize } from "./../core/index";
 
 @Directive({
-    selector: "[minSize]"
+    selector: "[flxMinSize]"
 })
-export class MinSizeDirective extends ConditionalSizeDirective {
+export class FlxMinSizeDirective extends ConditionalSizeDirective {
 
     private _minSize: string;
 
-    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, layoutService: LayoutService){
-        super(viewContainerRef, templateRef, layoutService);
+    constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>, flexService: FlexService){
+        super(viewContainerRef, templateRef, flexService);
     }
 
-    @Input("minSize")
+    @Input("flxMinSize")
     set minSize(value: string){
         this._minSize = value;
         this.updateVisibility();
