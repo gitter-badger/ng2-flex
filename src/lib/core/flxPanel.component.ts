@@ -5,64 +5,66 @@ import { FlexService, FlexElement, Orientation, VerticalAlignment, HorizontalAli
     selector: "flxPanel, [flxPanel]",
     template: "<ng-content></ng-content>"
 })
-export class FlxPanelComponent extends FlexElement {
+/*export*/ class FlxPanelComponent {
 
-    constructor(readonly elementRef: ElementRef, readonly renderer: Renderer, readonly flexService: FlexService){
-        super(elementRef, renderer, flexService);
-    }
+    private flexElement: FlexElement
+
+    /*constructor(readonly elementRef: ElementRef, readonly renderer: Renderer, readonly flexService: FlexService){
+        this.flexElement = new FlexElement(elementRef, renderer, flexService);
+    }*/
 
     @Input()
     set orientation(value: Orientation){
-        this.setOrientation(value);
+        this.flexElement.setOrientation(value);
     }
 
     get orientation(): Orientation {
-        return this.getOrientation();
+        return this.flexElement.getOrientation();
     }
 
     @Input()
     set verticalAlignment(value: VerticalAlignment){
-        this.setVerticalAlignment(value);
+        this.flexElement.setVerticalAlignment(value);
     }
 
     get verticalAlignment(): VerticalAlignment {
-        return this.getVerticalAlignment();
+        return this.flexElement.getVerticalAlignment();
     }
 
     @Input()
     set horizontalAlignment(value: HorizontalAlignment){
-        this.setHorizontalAlignment(value);
+        this.flexElement.setHorizontalAlignment(value);
     }
 
     get horizontalAligment(): HorizontalAlignment {
-        return this.getHorizontalAligment();
+        return this.flexElement.getHorizontalAligment();
     }
 
 
     @Input()
     set itemsSeparation(value: ItemsSeparation) {
-        this.setItemsSeparation(value);
+        this.flexElement.setItemsSeparation(value);
     }
 
     get itemsSeparation(): ItemsSeparation {
-        return this.getItemsSeparation();
+        return this.flexElement.getItemsSeparation();
     }
 
     @Input()
     set size(value: string | SizeMapping) {
-        this.setSize(value);
+        this.flexElement.setSize(value);
     }
 
     get size(): string | SizeMapping {
-        return this.getSize();
+        return this.flexElement.getSize();
     }
 
     @Input()
     set order(value: number | SizeMapping) {
-        this.setOrder(value);
+        this.flexElement.setOrder(value);
     }
 
     get order(): number | SizeMapping {
-        return this.getOrder();
+        return this.flexElement.getOrder();
     }
 }

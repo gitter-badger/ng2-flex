@@ -1,6 +1,6 @@
 import { FlexService } from "./flex.service";
 import { FlexElement } from "./flexElement";
-import { FlxPanelComponent } from "./flxPanel.component";
+//import { FlxPanelComponent } from "./flxPanel.component";
 import { FlxContainerComponent } from "./flxContainer.component";
 import { SizeMapping } from "./sizeMapping";
 import { FLEX_CSS_CLASSES } from "./flexCssClasses.constants";
@@ -20,7 +20,7 @@ export {
     ItemsSeparation,
     FlexService,
     FlexElement,
-    FlxPanelComponent,
+    //FlxPanelComponent,
     FlxContainerComponent,
     SizeMapping,
     FLEX_CSS_CLASSES

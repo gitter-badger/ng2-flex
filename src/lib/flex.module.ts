@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { FlexService, FlxPanelComponent, FlxContainerComponent } from "./core/index";
+import { FlexService/*, FlxPanelComponent*/, FlxContainerComponent } from "./core/index";
 
 import { FlxGridComponent, FlxColumnComponent, FlxRowComponent } from "./grid/index";
 
@@ -11,7 +11,7 @@ import { FlxClassDirective } from "./attributeDirectives/index";
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [FlxPanelComponent,
+    declarations: [//FlxPanelComponent,
                    FlxContainerComponent, 
                    FlxGridComponent, 
                    FlxColumnComponent, 
@@ -20,7 +20,7 @@ import { FlxClassDirective } from "./attributeDirectives/index";
                    FlxMinSizeDirective, 
                    FlxSizeDirective, 
                    FlxClassDirective],
-    exports: [FlxPanelComponent,
+    exports: [//FlxPanelComponent,
               FlxContainerComponent, 
               FlxGridComponent, 
               FlxColumnComponent, 
